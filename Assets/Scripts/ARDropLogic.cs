@@ -76,6 +76,7 @@ public class Placement : MonoBehaviour
     private void PlaceObject()
     {
         // Create a new object to show on the screen
-        Instantiate(objectToDrop, placementPose.position, placementPose.rotation);
+        //Instantiate(objectToDrop, placementPose.position, placementPose.rotation);
+        Destroy(Instantiate(objectToDrop, transform.position, transform.rotation), 10f);
     }
 }
