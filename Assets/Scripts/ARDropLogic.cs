@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -76,7 +77,6 @@ public class Placement : MonoBehaviour
     private void PlaceObject()
     {
         // Create a new object to show on the screen
-        //Instantiate(objectToDrop, placementPose.position, placementPose.rotation);
-        Destroy(Instantiate(objectToDrop, transform.position, transform.rotation), 10f);
+        Destroy(Instantiate(objectToDrop, placementPose.position, placementPose.rotation), 5f);
     }
 }
